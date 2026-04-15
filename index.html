@@ -8,5 +8,42 @@
 </head>
 <body class="bg-gray-100">
     <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex gap-6">
+                <a href="index.html" class="text-blue-600 font-semibold">Home</a>
+                <a href="compare.html" class="text-gray-600 hover:text-blue-600">Compare</a>
+                <a href="favourites.html" class="text-gray-600 hover:text-blue-600 favourites-link">Favourites</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">🌍 Country Explorer</h1>
+        
+        <!-- Search and Filter Section -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <div class="flex flex-col md:flex-row gap-4">
+                <input type="text" id="searchInput" placeholder="Search by country name..." 
+                       class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <select id="regionSelect" class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="All">All Regions</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Americas">Americas</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Loading and Error States -->
+        <div id="status" class="mb-6"></div>
+        
+        <!-- Country Cards Grid -->
+        <div id="countriesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+    </div>
+
+    <script src="js/index.js"></script>
 </body>
 </html>
