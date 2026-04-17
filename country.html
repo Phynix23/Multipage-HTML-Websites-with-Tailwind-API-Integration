@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex gap-6">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600">Home</a>
+                <a href="compare.html" class="text-gray-600 hover:text-blue-600">Compare</a>
+                <a href="favourites.html" class="text-gray-600 hover:text-blue-600 favourites-link">Favourites</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <div id="content">
+            <!-- Content loaded dynamically -->
+        </div>
+    </div>
+
+    <!-- Border Countries Modal -->
+    <dialog id="bordersModal" class="rounded-2xl shadow-2xl p-0 w-full max-w-md backdrop:bg-black/60">
+        <div class="bg-white rounded-2xl p-6">
+            <h2 class="text-xl font-bold mb-4">🌍 Border Countries</h2>
+            <div id="bordersList" class="flex flex-wrap gap-2 mb-6"></div>
+            <button id="closeModalBtn" class="w-full py-2 border border-gray-300 rounded-lg text-sm hover:bg-gray-50">
+                Close
+            </button>
+        </div>
+    </dialog>
+
+    <script src="js/country.js"></script>
+</body>
+</html>
